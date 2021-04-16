@@ -10,5 +10,6 @@
          break
        end
     words.push(word)
+    words.sort
   end
 puts "Your Words Are: #{words.join(",")}"

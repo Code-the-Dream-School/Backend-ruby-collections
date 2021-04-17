@@ -6,10 +6,10 @@
     loop do
       puts "Enter a word or press the enter key to leave"
       word = gets.chomp
+       words.sort
        if word == ""
          break
        end
     words.push(word)
-    words.sort
   end
 puts "Your Words Are: #{words.join(",")}"

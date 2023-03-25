@@ -7,11 +7,10 @@ words = [];
 puts "Enter some words";
 input = gets.chomp;
 words.push(input);
-#p words_collection.join(' ').split(' ').sort();
-
 
 def sorted_words (arr)
-     arr.join(' ').split(' ').sort();
+     sorted = arr.join(' ').split(' ').sort();
+     puts sorted;
 end
 
 puts sorted_words(words);

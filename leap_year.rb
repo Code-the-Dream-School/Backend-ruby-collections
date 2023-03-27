@@ -10,10 +10,18 @@ starting_year = gets.chomp.to_i;
 puts "Enter an ending year";
 ending_year = gets.chomp.to_i;
 
+# def leap_years(start_year, end_year)
+#    ranged_years = (start_year..end_year).to_a.select {|n| n % 4 == 0 && n % 100 != 0}
+#     puts ranged_years;
+# end;
+
 def leap_years(start_year, end_year)
-   ranged_years = (start_year..end_year).to_a.select {|n| n % 4 == 0 && n % 100 != 0 }
+    ranged_years = (start_year..end_year).to_a.select { 
+        |year| (year % 4 == 0) && (year % 100 != 100) || (year % 400 == 0);
+    }
     puts ranged_years;
-end;
+end
+
 
 
 puts leap_years(starting_year, ending_year);
